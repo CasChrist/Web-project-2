@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1B1A17;
+  font-family: Inter;
+}
+
+.outline {
+  background-color: #1F1E1B;
+  border: 2px solid #FF8303;
+  color: #F0E3CA;
+}
+.outline:hover {
+  background-color: #1B1A17;
+  border-color: #A35709;
+}
+
+button {
+  cursor: pointer;
+}

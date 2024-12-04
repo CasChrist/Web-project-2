@@ -4,6 +4,8 @@ $primary-active: #1B1A17;
 $secondary-active: #A35709;
 $font-color: #F0E3CA;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +14,7 @@ $font-color: #F0E3CA;
 
 body {
   background-color: $primary-active;
+  font-family: Inter;
 }
 
 .outline {
