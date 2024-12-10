@@ -1,0 +1,37 @@
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.tasks-elem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 16px 10px;
+  border-radius: 8px;
+  gap: 16px;
+  background-color: #1B1A17;
+  border-color: #A35709;
+}
+.tasks-elem-text {
+  display: flex;
+  flex-direction: column;
+}
+.tasks-elem-text h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+.tasks-elem-text p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.tasks-elem button {
+  min-width: 32px;
+  min-height: 32px;
+  height: 32px;
+  width: 32px;
+  border-radius: 5px;
+  border-color: #A35709;
+  color: #FF8303;
+}

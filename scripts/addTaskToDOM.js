@@ -8,12 +8,14 @@ export function addTaskToDOM(task) {
   const taskElement = document.createElement("div");
   const actionBar = document.createElement("div");
 
-  taskElement.classList.add("tasks-elem");
+  taskElement.classList.add("outline", "tasks-elem");
   taskElement.setAttribute("data-id", task.id);
   taskElement.innerHTML = `
-    <h3>${task.title}</h3>
-    <p>${task.description}</p>
-    <button class="tasks-elem__delete">x</button>`;
+    <div class="tasks-elem-text">
+      <h3>${task.title}</h3>
+      <p>${task.description}</p>
+    </div>
+    <button class="tasks-elem__delete outline">X</button>`;
 
   actionBar.classList.add("tasks-elem__actions");
   actionBar.style.display = "none";

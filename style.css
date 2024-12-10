@@ -15,10 +15,6 @@ body {
   border: 2px solid #FF8303;
   color: #F0E3CA;
 }
-.outline:hover {
-  background-color: #1B1A17;
-  border-color: #A35709;
-}
 
 button {
   cursor: pointer;
@@ -48,6 +44,7 @@ button {
   width: 100%;
   height: 32px;
   padding: 7px 14px;
+  color: rgba(240, 227, 202, 0.64);
   border-radius: 4px;
 }
 .createTaskContainer-common-input input:focus {
@@ -79,4 +76,42 @@ button {
   padding-bottom: 12px;
   border-top: 1px solid #FF8303;
   border-bottom: 1px solid #FF8303;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.tasks-elem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 16px 10px;
+  border-radius: 8px;
+  gap: 16px;
+  background-color: #1B1A17;
+  border-color: #A35709;
+}
+.tasks-elem-text {
+  display: flex;
+  flex-direction: column;
+}
+.tasks-elem-text h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+.tasks-elem-text p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.tasks-elem button {
+  min-width: 32px;
+  min-height: 32px;
+  height: 32px;
+  width: 32px;
+  border-radius: 5px;
+  border-color: #A35709;
+  color: #FF8303;
 }
