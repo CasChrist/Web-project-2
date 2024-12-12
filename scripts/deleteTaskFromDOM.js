@@ -3,18 +3,20 @@ import { updateNoTasksMessage } from "../Tasks.js";
 
 export function deleteTaskFromDOM(taskID) {
   const confirmationMenu = document.createElement("div");
-  confirmationMenu.classList.add("tasks-elem__confirmation-menu");
+  confirmationMenu.classList.add("confirmation-menu");
 
   const overlay = document.createElement("div");
-  overlay.classList.add("tasks-elem__overlay");
+  overlay.classList.add("overlay");
   overlay.onclick = () => closeConfirmationMenu(confirmationMenu, overlay);
 
   const content = document.createElement("div");
-  content.classList.add("task-elem__confirmation-menu-content");
+  content.classList.add("confirmation-menu__content");
   content.innerHTML = `
-    <p>Delete this task?/p>
-    <button id="confirmDelete">Yes</button>
-    <button id="cancelDelete">No</button>`;
+    <p>Delete this task?</p>
+    <div class="confirmation-menu__content-buttons">
+      <button id="confirmDelete">Yes</button>
+      <button id="cancelDelete">No</button>
+    </div>`;
 
   confirmationMenu.appendChild(content);
   document.body.appendChild(overlay);
