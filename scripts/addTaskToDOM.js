@@ -18,16 +18,18 @@ export function addTaskToDOM(task) {
     <button class="tasks-elem__delete outline">X</button>`;
 
   actionBar.classList.add("tasks-elem__actions");
-  actionBar.style.display = "none";
+  // actionBar.style.display = "none";
   actionBar.innerHTML = `
     <button class="tasks-elem__actions-edit"><img src="" alt="Edit"></button>
     <button class="tasks-elem__actions-share"><img src="" alt="Share"></button>
     <button class="tasks-elem__actions-details"><img src="" alt="Details"></button>`;
 
   taskElement.addEventListener("click", () => {
-    const actionBar = taskElement.querySelector(".tasks-elem__actions");
-    actionBar.style.display =
-      actionBar.style.display === "none" ? "block" : "none";
+    if (tasksContainer.querySelector(".tasks-elem__actions")) {
+      actionBar.remove();
+    } else {
+      taskElement.after(actionBar);
+    }
   });
 
   taskElement
@@ -58,6 +60,6 @@ export function addTaskToDOM(task) {
       showDetails(task.id);
     });
 
-  taskElement.appendChild(actionBar);
+  // taskElement.appendChild(actionBar);
   tasksContainer.appendChild(taskElement);
 }
