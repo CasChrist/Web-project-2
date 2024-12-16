@@ -8,17 +8,17 @@ export function showDetails(taskID) {
     const description = taskElement.querySelector("p").innerText;
 
     const modal = document.createElement("div");
-    modal.classList.add("tasks-elem__modal");
+    modal.classList.add("modal");
 
     const overlay = document.createElement("div");
-    overlay.classList.add("tasks-elem__overlay");
-    overlay.onclick = () => closeModal(confirmationMenu, overlay);
+    overlay.classList.add("overlay");
+    overlay.onclick = () => closeModal(modal, overlay);
 
     const modalContent = document.createElement("div");
-    modalContent.classList.add("tasks-elem__modal-content");
+    modalContent.classList.add("modal__content");
     modalContent.innerHTML = `
-      <input id="viewTitleInput" value="${title}" />
-      <textarea id="viewDescriptionInput">${description}</textarea>
+      <input id="viewTitleInput" value="${title}" readonly />
+      <textarea id="viewDescriptionInput" readonly>${description}</textarea>
       <button id="closeModal">Close</button>`;
 
     modal.appendChild(modalContent);
