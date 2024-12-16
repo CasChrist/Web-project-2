@@ -5,26 +5,26 @@ export function showShare(taskID) {
 
   if (taskElement) {
     const shareMenu = document.createElement("div");
-    shareMenu.classList.add("tasks-elem__share");
+    shareMenu.classList.add("share");
 
     const overlay = document.createElement("div");
-    overlay.classList.add("tasks-elem__overlay");
-    overlay.addEventListener("click", () => {
+    overlay.classList.add("overlay");
+    overlay.onclick = () => {
       document.body.removeChild(shareMenu);
-    });
+      document.body.removeChild(overlay);
+    };
 
-    const content = document.createElement("div");
-    content.classList.add("tasks-elem__share-content");
-    content.innerHTML = `
-      <button class="tasks-elem__share-icons"><img src="" alt="Copy to clipboard"></button>
-      <button class="tasks-elem__share-icons"><img src="" alt="VK"></button>
-      <button class="tasks-elem__share-icons"><img src="" alt="Telegram"></button>
-      <button class="tasks-elem__share-icons"><img src="" alt="WhatsApp"></button>
-      <button class="tasks-elem__share-icons"><img src="" alt="Facebook"></button>`;
+    const shareMenuContent = document.createElement("div");
+    shareMenuContent.classList.add("share__content");
+    shareMenuContent.innerHTML = `
+      <button class="share__icons"><img src="./icons/copy.svg" alt="Copy to clipboard"></button>
+      <button class="share__icons"><img src="./icons/vk.svg" alt="VK"></button>
+      <button class="share__icons"><img src="./icons/telegram.svg" alt="Telegram"></button>
+      <button class="share__icons"><img src="./icons/whatsapp.svg" alt="WhatsApp"></button>
+      <button class="share__icons"><img src="./icons/facebook.svg" alt="Facebook"></button>`;
 
-    shareMenu.appendChild(overlay);
-    shareMenu.appendChild(content);
-
+    shareMenu.appendChild(shareMenuContent);
     document.body.appendChild(shareMenu);
+    document.body.appendChild(overlay);
   }
 }
