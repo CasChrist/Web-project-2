@@ -19,6 +19,10 @@ body {
 button {
   cursor: pointer;
 }
+button:focus, button:hover {
+  outline: none;
+  background-color: #1B1A17;
+}
 
 .overlay {
   position: fixed;
@@ -142,7 +146,7 @@ button {
   min-height: 36px;
   border-radius: 6px;
   border: 2px solid #A35709;
-  background-color: #242320;
+  background-color: #1F1E1B;
 }
 .tasks-elem__actions-details {
   font-family: "Roboto";

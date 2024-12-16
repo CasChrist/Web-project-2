@@ -24,6 +24,11 @@ body {
 
 button {
   cursor: pointer;
+
+  &:focus, &:hover {
+    outline: none;
+    background-color: $primary-active;
+  }
 }
 
 .overlay {

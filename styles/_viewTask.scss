@@ -62,7 +62,7 @@ $font-color: #F0E3CA;
         min-height: 36px;
         border-radius: 6px;
         border: 2px solid $secondary-active;
-        background-color: #242320;
+        background-color: $primary-color;
       }
 
       &-details {

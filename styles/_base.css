@@ -19,6 +19,10 @@ body {
 button {
   cursor: pointer;
 }
+button:focus, button:hover {
+  outline: none;
+  background-color: #1B1A17;
+}
 
 .overlay {
   position: fixed;
