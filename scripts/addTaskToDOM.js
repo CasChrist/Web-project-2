@@ -18,15 +18,14 @@ export function addTaskToDOM(task) {
     <button class="tasks-elem__delete outline">X</button>`;
 
   actionBar.classList.add("tasks-elem__actions");
-  // actionBar.style.display = "none";
   actionBar.innerHTML = `
-    <button class="tasks-elem__actions-edit"><img src="" alt="Edit"></button>
-    <button class="tasks-elem__actions-share"><img src="" alt="Share"></button>
-    <button class="tasks-elem__actions-details"><img src="" alt="Details"></button>`;
+    <button class="tasks-elem__actions-share"><img src="./icons/share.svg" alt="Share"></button>  
+    <button class="tasks-elem__actions-details">i</button>
+    <button class="tasks-elem__actions-edit"><img src="./icons/edit.svg" alt="Edit"></button>`;
 
   taskElement.addEventListener("click", () => {
-    if (tasksContainer.querySelector(".tasks-elem__actions")) {
-      actionBar.remove();
+    if (taskElement.nextElementSibling && taskElement.nextElementSibling.classList.contains("tasks-elem__actions")) {
+        actionBar.remove();
     } else {
       taskElement.after(actionBar);
     }

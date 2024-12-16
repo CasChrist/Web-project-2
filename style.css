@@ -20,6 +20,16 @@ button {
   cursor: pointer;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 7, 7, 0.89);
+  z-index: 999;
+}
+
 .createTaskContainer {
   display: flex;
   flex-direction: column;
@@ -115,15 +125,30 @@ button {
   border-color: #A35709;
   color: #FF8303;
 }
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
+.tasks-elem__actions {
+  display: flex;
+  margin-top: -8px;
   width: 100%;
-  height: 100%;
-  background-color: rgba(7, 7, 7, 0.89);
-  z-index: 999;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.tasks-elem__actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 6px;
+  border: 2px solid #A35709;
+  background-color: #242320;
+}
+.tasks-elem__actions-details {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
 }
 
 .confirmation-menu {
