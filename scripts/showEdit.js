@@ -10,21 +10,23 @@ export function showEdit(taskID) {
     const description = taskElement.querySelector("p").innerText;
 
     const modal = document.createElement("div");
-    modal.classList.add("tasks-elem__modal");
+    modal.classList.add("modal");
 
     const overlay = document.createElement("div");
-    overlay.classList.add("tasks-elem__overlay");
+    overlay.classList.add("overlay");
     overlay.onclick = () => {
       closeModal(modal, overlay);
     };
 
     const modalContent = document.createElement("div");
-    modalContent.classList.add("tasks-elem__modal-content");
+    modalContent.classList.add("modal__content");
     modalContent.innerHTML = `
       <input id="editTitleInput" value="${title}" />
       <textarea id="editDescriptionInput">${description}</textarea>
-      <button id="saveButton">Save</button>
-      <button id="closeModal">Cancel</button`;
+      <div id="modalButtons">
+        <button id="saveButton">Save</button>
+        <button id="closeModal">Cancel</button
+      </div>`;
 
     modalContent.querySelector("#saveButton").onclick = () => {
       const updatedTask = {
